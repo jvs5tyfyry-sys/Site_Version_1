@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="L'Ultima Goccia — Irish spirits selected for the Italian market.">
+  <title>L'Ultima Goccia | Irish Spirits · Italy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="locked">
+
+  <!-- 18+ AGE GATE -->
+  <div class="age-gate" id="ageGate" role="dialog" aria-modal="true" aria-labelledby="ageTitle">
+    <div class="age-card">
+      <div class="age-topline">
+        <span class="age-mark">L’UG</span>
+        <button class="age-language" id="ageLanguageToggle" type="button" aria-label="Switch language">IT</button>
+      </div>
+      <p class="eyebrow" data-i18n="ageKicker">Before you enter</p>
+      <h1 id="ageTitle" data-i18n="ageTitle">Please enter your date of birth</h1>
+      <p class="age-intro" data-i18n="ageRequirement">You must be 18 or older to enter this website.</p>
+
+      <div class="dob-fields" aria-label="Date of birth">
+        <div class="dob-field">
+          <label for="dobDay" data-i18n="dobDay">Day</label>
+          <input id="dobDay" name="dobDay" type="text" inputmode="numeric" maxlength="2" placeholder="DD" autocomplete="bday-day">
+        </div>
+        <div class="dob-field">
+          <label for="dobMonth" data-i18n="dobMonth">Month</label>
+          <input id="dobMonth" name="dobMonth" type="text" inputmode="numeric" maxlength="2" placeholder="MM" autocomplete="bday-month">
+        </div>
+        <div class="dob-field dob-year">
+          <label for="dobYear" data-i18n="dobYear">Year</label>
+          <input id="dobYear" name="dobYear" type="text" inputmode="numeric" maxlength="4" placeholder="YYYY" autocomplete="bday-year">
+        </div>
+      </div>
+
+      <p class="age-error" id="ageError" role="alert" aria-live="polite"></p>
+
+      <label class="remember-age">
+        <input type="checkbox" id="rememberAge">
+        <span data-i18n="rememberAge">Remember me on this device</span>
+      </label>
+
+      <button class="age-enter" id="ageYes" type="button" data-i18n="enterSite">Enter</button>
+      <a class="age-under" href="https://www.google.com/" data-i18n="under18">I’m under 18</a>
+
+      <p class="age-legal" data-i18n="ageLegal">By entering this site, you confirm that you are of legal drinking age.</p>
+      <small data-i18n="responsible">Drink responsibly.</small>
+    </div>
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="#top" aria-label="L'Ultima Goccia home">
+      <span class="brand-name">L'ultima Goccia</span>
+      <span class="brand-sub">IRISH SPIRITS · ITALY</span>
+    </a>
+
+    <button class="language-toggle" id="languageToggle" type="button" aria-label="Switch language">IT</button>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+
+    <nav class="nav" id="mainNav">
+      <a href="#selection" data-i18n="navSelection">Selection</a>
+      <a href="#coming-soon" data-i18n="navComing">Coming Soon</a>
+      <a href="#commitment" data-i18n="navCommitment">Commitment</a>
+      <a href="#story" data-i18n="navStory">Our Story</a>
+      <a href="#distillers" data-i18n="navDistillers">Distillers</a>
+      <a href="#social" data-i18n="navFollow">Follow</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Irish Selection">
+      <video class="hero-video" autoplay muted loop playsinline poster="assets/hero-poster.jpg">
+        <source src="assets/hero.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="hero-grain"></div>
+
+      <div class="hero-content container">
+        <p class="eyebrow" data-i18n="heroKicker">Irish Selection · Italy</p>
+        <h1 data-i18n="heroTitle">The spirit of Ireland,<br><em>poured with Italian style.</em></h1>
+        <p class="hero-copy" data-i18n="heroCopy">Characterful whiskey and botanical gin, selected for restaurants, cocktail bars and Italian connoisseurs.</p>
+        <a class="circle-link" href="#selection" aria-label="Discover the selection">
+          <span data-i18n="discover">Discover</span><span>↓</span>
+        </a>
+      </div>
+
+      <div class="hero-bottom">
+        <span>IRELAND → ITALIA</span>
+        <span>EST. 2026</span>
+      </div>
+    </section>
+
+    <!-- SELECTION -->
+    <section class="selection section-dark" id="selection">
+      <div class="container">
+        <div class="section-intro reveal">
+          <p class="eyebrow" data-i18n="selectionKicker">01 · The Selection</p>
+          <h2 data-i18n="selectionTitle">Irish character.<br><em>Italian appreciation.</em></h2>
+        </div>
+
+        <div class="product-grid">
+          <a class="product-card reveal" href="#whiskey">
+            <div class="product-image whiskey-image">
+              <img src="assets/whiskey.jpg" alt="Irish whiskey served on an oak barrel">
+              <div class="product-overlay">
+                <p class="product-overlay-kicker" data-i18n="whiskeyKicker">IRISH WHISKEY</p>
+                <h3 data-i18n="whiskeyTitle">Deep, smooth, unmistakably Irish.</h3>
+                <p data-i18n="whiskeyCopy">From harmonious blends to patiently matured single malts, a selection made for sipping neat and for cocktails with a distinctive signature.</p>
+                <strong data-i18n="whiskeyNotes">Honey · toasted wood · warm spice</strong>
+              </div>
+              <span class="card-number">01</span>
+            </div>
+            <div class="product-meta">
+              <div>
+                <p class="eyebrow" data-i18n="selectionLabel">The Selection</p>
+                <h3 data-i18n="whiskeyLabel">Irish Whiskey</h3>
+              </div>
+              <span class="arrow">↗</span>
+            </div>
+          </a>
+
+          <a class="product-card reveal" href="#gin">
+            <div class="product-image gin-image">
+              <img src="assets/gin.jpg" alt="Irish coastal gin served with lemon and ice">
+              <div class="product-overlay">
+                <p class="product-overlay-kicker" data-i18n="ginKicker">IRISH GIN</p>
+                <h3 data-i18n="ginTitle">Bold botanicals, contemporary spirit.</h3>
+                <p data-i18n="ginCopy">Small-batch gins with juniper berries and surprising botanicals: bright in a gin and tonic, refined in signature cocktails.</p>
+                <strong data-i18n="ginNotes">Juniper · citrus · aromatic botanicals</strong>
+              </div>
+              <span class="card-number">02</span>
+            </div>
+            <div class="product-meta">
+              <div>
+                <p class="eyebrow" data-i18n="selectionLabel">The Selection</p>
+                <h3 data-i18n="ginLabel">Irish Gin</h3>
+              </div>
+              <span class="arrow">↗</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMING SOON -->
+    <section class="coming-soon" id="coming-soon">
+      <div class="coming-bg"></div>
+      <div class="container coming-content reveal">
+        <p class="eyebrow" data-i18n="comingKicker">02 · On the Horizon</p>
+        <p class="giant-type">COMING<br><em>SOON</em></p>
+        <p class="coming-copy" data-i18n="comingCopy">See the exciting distilleries.<br>Discover what's next.</p>
+      </div>
+    </section>
+
+    <!-- COMMITMENT -->
+    <section class="commitment section-light" id="commitment">
+      <div class="container commitment-layout">
+        <div class="commitment-heading reveal">
+          <p class="eyebrow" data-i18n="commitKicker">03 · Our Commitment</p>
+          <h2 data-i18n="commitTitle">From distillery<br><em>to your venue.</em></h2>
+        </div>
+        <div class="commitment-copy reveal">
+          <p class="lead" data-i18n="commitLead">A considered selection from independent Irish producers.</p>
+          <div class="commitment-list">
+            <div><span>01</span><p data-i18n="commit1">Quality and traceability for the Italian market</p></div>
+            <div><span>02</span><p data-i18n="commit2">Characterful bottles, made to be shared</p></div>
+            <div><span>03</span><p data-i18n="commit3">A direct connection between exceptional producers and the people who serve them</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY / DISTILLERS -->
+    <section class="duo-section section-dark">
+      <article class="duo-panel story-panel" id="story">
+        <div class="duo-overlay"></div>
+        <div class="duo-content reveal">
+          <p class="eyebrow" data-i18n="storyKicker">04 · Our Story</p>
+          <h2 data-i18n="storyTitle">From Ireland,<br><em>with purpose.</em></h2>
+          <p data-i18n="storyCopy">We look for spirits with a sense of place, personality and a story worth pouring.</p>
+          <a class="text-link" href="#footer"><span data-i18n="storyLink">Discover our story</span> <span>→</span></a>
+        </div>
+      </article>
+
+      <article class="duo-panel distiller-panel" id="distillers">
+        <div class="duo-overlay"></div>
+        <div class="duo-content reveal">
+          <p class="eyebrow" data-i18n="distillersKicker">05 · Our Distillers</p>
+          <h2 data-i18n="distillersTitle">Meet the<br><em>makers.</em></h2>
+          <p data-i18n="distillersCopy">Independent Irish producers whose craft deserves a place at the Italian table.</p>
+          <a class="text-link" href="#footer"><span data-i18n="distillersLink">Meet our distillers</span> <span>→</span></a>
+        </div>
+      </article>
+    </section>
+
+    <!-- SOCIAL -->
+    <section class="social section-light" id="social">
+      <div class="container social-inner reveal">
+        <p class="eyebrow" data-i18n="socialKicker">06 · Stay in the know</p>
+        <h2 data-i18n="socialTitle">Follow <em>us.</em></h2>
+        <p data-i18n="socialCopy">New bottles, new producers, Irish stories and where to find us.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram">Instagram <span>↗</span></a>
+          <a href="#" aria-label="Facebook">Facebook <span>↗</span></a>
+          <a href="#" aria-label="LinkedIn">LinkedIn <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-top">
+        <a class="brand footer-brand" href="#top">
+          <span class="brand-name">L'ultima Goccia</span>
+          <span class="brand-sub">IRISH SPIRITS · ITALY</span>
+        </a>
+        <p>Irish spirits · Italian market</p>
+      </div>
+      <div class="footer-bottom">
+        <p>© L’Ultima Goccia · 2026</p>
+        <div class="footer-links">
+          <a href="https://www.eurocare.org/">Over 18’s · Adults Drink Responsibly</a>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
